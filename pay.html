@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application">
+    <meta name="Cache-Control" content="private">
+    <title>支付</title>
+    <link rel="stylesheet" href="static/dist/css/wap_bundle.css">
+    <script src="static/dist/js/wap_bundle.js"></script>
+    <script src="static/dist/js/usercenter_bundle.js"></script>
+</head>
+
+<body>
+    <div class="play">
+        <div  class="header">
+            <a id="go-back" href="javascript:;"><img src="static/images/l-back.png" alt=""> <span>支付</span></a>
+        </div>
+        <div class="information">
+            <div class="pay_information">
+                <div class="price">
+                    <span id="symbol">&#165</span>
+                    <span id="produce_price">685</span>
+                </div>
+                <div class="infor">
+                    <p>游戏名称：<font id="game_name">12</font>
+                    </p>
+                    <p>商品名称：<font id="product_name">25</font>
+                    </p>
+                </div>
+            </div>
+            <div class="account"><span>账号</span><span id="account_pay">12385541</span></div>
+            <div class="choice">请选择支付方式</div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <p class="alipay"><img src="static/images/zhi.png" alt=""> <span>支付宝</span></p>
+                        <p class="wchart"><img src="static/images/chart.png" alt=""><span>微信</span></p>
+                    </li>
+                    <li>
+                        <p class="unionPay"><img src="static/images/unionPay.png" alt=""> <span>云闪付</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+    <div class="prompt">
+        <div class="dialog-content">订单未完成，是否继续交易？</div>
+        <div class="btn-container">
+            <p src="image/img-fanhuijian.png" alt="" class="l_backs" id="back">返回</p>
+            <p src="image/img-jixujian.png" alt="" class="l_continue" id="continue">继续</p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+                // 微信
+        $(".wchart").click(function(){
+            PostMessageToNativeSDK("wechatPay");
+        });
+        // 支付宝
+        $(".alipay").click(function(){
+            PostMessageToNativeSDK("alipay");
+        });
+        //unionPay
+        $(".unionPay").click(function(){
+         PostMessageToNativeSDK("unionPay");
+        })
+        // 返回
+        $("#back").click(function(){
+            PostMessageToNativeSDK("updatePay");
+        }); 
+    })
+</script>
+</html>

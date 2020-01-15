@@ -1,0 +1,1119 @@
+@import "./base.less";
+//base
+@baseColor: #333;
+@baseBgColor:#f4f3f3;
+@size12:.225rem;
+@size16:.275rem;
+@size18:.3rem;
+@size20:.325rem;
+@size24:.375rem;
+@baseBorderColor:#747bf9;
+
+html{
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  body{
+    -webkit-text-size-adjust: 100% !important;
+    color: @baseColor;
+    width: 100%;
+    height: 100%;
+    .master{
+       width: 100%;
+       height: 100%;
+       .pa();
+       left: 0;
+       top: 0;
+       background-color: rgba(0, 0, 0, 0.5);
+       display: none;
+    }
+    &#account-body{
+      .header{
+        span{
+          border-left: none!important;
+        }
+      }
+    }
+  }
+}
+
+.tr{
+  text-align: right;
+}
+
+.container{
+  background: @baseBgColor;
+   .css3(animation,fadeIn .2s);
+  .pa();
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding:.4rem .5rem;
+  .logo{
+    height: .8rem;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: auto 100%;
+  }
+  .close{
+    .pa();
+    right: .3rem;
+    top: .3rem;
+    width: .3rem;
+    height: .3rem;
+    display: block;
+    background: url("../images/close.png") no-repeat center;
+    background-size: 100% auto;
+    display: none
+  }
+  .back_title{
+    .pa();
+    left: .3rem;
+    top: .3rem;
+    min-width: .3rem;
+    height: .3rem;
+    display: block;
+    background: url("../images/back.png") no-repeat center;
+    background-size:  auto 100%;
+  }
+  .header{
+    .pa();
+    left: 0;
+    top: 0;
+    width: 100%;
+    .lh(.8rem);
+    border-bottom: 0.025rem solid #d3d3d3;
+    .back{
+      display: inline-block;
+      padding-left:.6rem;
+      background: url("../images/back.png") no-repeat .2rem center;
+      background-size: .2rem auto;
+      .fs(@size18,#888);
+      min-width: .3rem;
+      min-height: .8rem;
+    }
+  }
+  .button-grop{
+    width: 100%;
+        // .flex-space-around();
+        text-align: center;
+        button{
+           width: 3rem;
+          .lh(.8rem);
+          .fs(@size18,#fff);
+          border-radius: .1rem;
+          margin: .5rem .2rem 0;
+      }
+      .left{
+        border:1px solid @baseBorderColor;
+        .fs(@size18,@baseBorderColor);
+        background:none ;
+        float: none
+      }
+      .right{
+        .bg(@baseBorderColor);
+        float: none
+      }
+  }
+}
+.form-container{
+  padding: .2rem 0 0;
+  width: 7rem;
+  margin: 0 auto;
+  .pointsMessage{
+    .lh(.6rem);
+      .fs(.275rem,#888);
+      text-align: center;
+      margin-bottom: .2rem;
+  }
+  li{
+    width: 7rem;
+    background: #fff;
+    border-radius: .1rem;
+    font-size: 0;
+    padding: .1rem 0;
+    margin-top: .2rem;
+    span{
+      display: inline-block;
+      width:1.5rem;
+      .lh(.6rem);
+      .fs(@size18,#222);
+      text-align: center;
+      border-right: 1px solid #dbdbdb;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+    input{
+      width:5.5rem;
+      height: .6rem;
+      .fs(@size18,#222);
+      text-indent: .2rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .btn{
+    width: 100%;
+    .lh(.8rem);
+    .fs(@size18,#fff);
+    background: url("../images/btn_bg.jpg") repeat-x center;
+    background-size: auto 100%;
+    border-radius: .1rem;
+    margin-top: .25rem;
+  }
+  .tr{
+    .fs(@size18,@baseBorderColor);
+    padding: .2rem  0;
+  }
+}
+.other-mode{
+  .pr();
+  width: 7rem;
+  margin-top: .2rem;
+  border-top: 0.025rem solid #a8a8a8;
+  span{
+    .fs(@size18,#888);
+    .pa();
+    display: block;
+    left: 50%;
+    top: -.3rem;
+    transform: translateX(-50%);
+    padding: .1rem .2rem;
+    background: @baseBgColor;
+  }
+  ul{
+    padding-top: .5rem;
+    .flex-space-around();
+    align-content: center;
+    li{
+      width: 20%;
+      height: .8rem;
+      cursor: pointer;
+      &.icon-game{
+        background: url("../images/icon_game.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-qq{
+        background: url("../images/icon_qq.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-wechat{
+        background: url("../images/icon_wechat.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-sina{
+        background: url("../images/icon_sina.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-other{
+        background: url("../images/icon_other.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-account-complaint{
+        background: url("../images/accountComplaint.png") no-repeat center;
+        background-size: auto 100%;
+      }
+      &.icon-SMS-verification{
+        background: url("../images/SMS-verification.png") no-repeat center;
+        background-size: auto 100%;
+      }
+    }
+  }
+}
+
+//账户注册
+.pt-container{
+  .form-container{
+    padding: .7rem 0 0;
+    li{
+      input{
+        width: 100%;
+      }
+      &.type-checkbox{
+          background: none;
+        .fs(@size18,#888);
+        .check{
+          width: .25rem;
+          height: 0.25rem;
+          margin: 0.05rem .2rem 0 0;
+          border:1px solid #888;
+          .fl();
+          .border-radius(@radius:2px);
+          display: none;
+        }
+        .checked{
+          width: .25rem;
+          height: 0.25rem;
+          margin: 0.05rem .2rem 0 0;
+          .fl();
+        }
+        a{
+          color:@baseBorderColor;
+        }
+      }
+    }
+  }
+}
+
+
+//账号登录
+.account-login{
+    .other{
+      .lh(.8rem);
+      p{
+        .fs(@size16,#888);
+        a{
+          .fs(@size16,@baseBorderColor);
+        }
+      }
+    }
+  
+}
+
+// 绑定手机
+.phone-bind{
+  .form-container{
+    padding: .7rem 0 0;
+  }
+}
+
+//绑定手机信息提示
+.prompt-bind-information{
+  .form-container{
+    .prompt-content{
+      .fs(@size18,#888);
+      text-align: center;
+      text-indent: 2em;
+    }
+  }
+}
+
+//退出游戏
+.quitGame{
+  .form-container{
+    .prompt-content{
+      .fs(@size24,#888);
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+//关闭提醒
+.close-remind{
+  .form-container{
+    .prompt-content{
+      .fs(@size18,#888);
+      margin-bottom: .1rem;
+    }
+    .btn{
+      background: @baseBorderColor;
+    }
+  }
+}
+
+//提醒
+.warn{
+  .form-container{
+    padding: 0;
+    .title{
+      text-align: center;
+      .fs(@size24,#888);
+      .lh(.8rem)
+    }
+     .prompt-content{
+      padding: .35rem 0;
+      max-height: 4rem;
+      overflow-y: scroll;
+       p{
+        text-indent: 2em;
+        text-align: left;
+        line-height: .45rem;
+        .fs(@size16,#888);
+       }
+     }
+    .btn{
+      .bg(@baseBorderColor);
+    }
+  }
+}
+
+//实名认证
+.certification{
+  .prompt-content{
+    margin-bottom: .3rem;
+    p{
+      .fs(@size16,#888);
+    }
+  }
+}
+
+//验证码
+.verification-code{
+  .form-container{
+    .pointsMessage{
+      text-align: center;
+      .lh(.8rem);
+      .fs(@size18,#888);
+      span{
+        text-decoration:underline;
+        color:#17b4f5;
+      }
+    }
+    ul{
+      width: 100%;
+      position: relative;
+      z-index: 9;
+      .flex-space-between();
+      -prefix-box-flex: 4; /* old spec webkit, moz */
+      -webkit-box-flex: 4;      /* OLD - iOS 6-, Safari 3.1-6 */
+      -webkit-flex: 4;          /* Chrome */
+      -moz-box-flex: 4;         /* Firefox 19- */
+      -ms-flex: 4;              /* IE 10 */
+      flex: 4;                  /* NEW,  Opera 12.1, Firefox 20+ */
+      flex: 4;
+      li{
+        width: 1rem;
+        .lh(1rem);
+        padding: 0;
+        color: #222;
+        text-align: center;
+        i{
+          .fs(@size20,#222);
+          .lh(1rem);
+        }
+      }
+    }
+    .authCode{
+      height: 1px;
+      background: none;
+      opacity: 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -100%;
+    }
+    .btn{
+      margin-top:.5rem;
+    }
+
+  }
+}
+
+//忘记密码
+.forget-password {
+  .form-container{
+    .pointsMessage{
+      margin-bottom: .2rem;
+    }
+    ul {
+      li{
+        .input-code{
+          width:5rem;
+        }
+        .getCode{
+          display: inline-block;
+          width:2rem;
+          .lh(.6rem);
+          .fs(@size16,@baseBorderColor);
+           text-align: center;
+          border-left: 1px solid #dbdbdb;
+          box-sizing: border-box;
+          vertical-align: middle;
+          background: none;
+        }
+      }
+      margin-bottom: .35rem;
+    }
+  }
+}
+
+//忘记密码-账号注册
+.forget-password-account{
+  padding: .4rem .5rem .8rem;
+  .form-container{
+    margin-top: .5rem;
+    ul{
+      margin:.3rem 0;
+    }
+  }
+}
+
+// 忘记密码-选择两种
+.forget-password-choose{
+.other-mode{
+  border: none;
+  margin-top: .5rem;
+  ul{
+    margin: 1rem 0;
+    li{
+      height: 1.2rem;
+    }
+  }
+}
+}
+
+.forget-password-notBind{
+  max-height: 5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .form-container{
+    ul{
+      li{
+        .pr();
+        background: none;
+        padding: 0;
+        label{
+          width: 1.5rem;
+          .lh(.8rem);
+          display: inline-block;
+          text-align: center;
+          .fs(.3rem,#888);
+        }
+        input,#forget-password-notBind-district{
+          .pr();
+          width:5.5rem ;
+          .lh(.8rem);
+          background: #fff;
+          text-align: center;
+          display: inline-block;
+        }
+        #forget-password-notBind-district{
+          .fs(.275rem,#888)
+        }
+        .down{
+          .pa();
+           height: 0.25rem;
+           right: .2rem;
+           top:.3rem;
+          }
+        .accoutGroup{
+           width: 5.5rem;
+             display: none;
+           .pa();
+            max-height: 2.7rem;
+            top: .8rem;
+            right: 0;
+            z-index: 100;
+            background:#fff;
+            overflow-y:scroll;
+            .border-radius(@radius:4px);
+            li{
+              margin-top: 0;
+              width: 100%;
+              .lh(.8rem);
+              .pr();
+              .fs(.275rem,#888);
+              text-align: center;
+            }
+        }
+      }
+      .pointsMessage-waring{
+        width: 5rem;
+        margin-left: 2rem;
+        text-align: center;
+        .lh(.6rem);
+        .fs(.25rem,#888);
+      }
+    }
+    .pointsMessage-result{
+      .fs(.275rem,#888);
+       margin: .7rem 0 0;
+    }
+  }
+}
+
+//切换账户
+.switchBox{
+  .form-container{
+    padding-top: 1.6rem;
+    .pr();
+    .accoutGroup{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: .3rem;
+      width:7rem;
+      max-height: 3.6rem;
+      z-index: 100;
+      background:#fff;
+      display: none;
+      overflow-y:scroll;
+      .border-radius(@radius:4px);
+      li{
+        padding: .15rem  .3rem;
+        margin-top: 0;
+        width: 6.4rem;
+        height: .9rem;
+        .pr();
+         .avatar{
+           height: .9rem;
+           width: .9rem;
+           .fl();
+         }
+         .account{
+           width: 5rem;
+           margin-left: 1rem;
+           span{
+             border-right: none;
+             .lh(.45rem);
+             text-align: left
+           }
+           p{
+                 .fs(@size12,#888);
+                 .lh(.45rem);
+           }
+
+         }
+         .down{
+          position: absolute;
+          height: 0.25rem;
+          right: .3rem;
+          top:.45rem;
+         }
+
+      }
+    }
+    #accoutGroup1{
+      height: 1.2rem!important;
+      max-height: 1.2rem!important;
+      overflow: hidden!important;
+    }
+    #accoutGroup2{
+       li{
+         border-bottom:1px #ededed solid ;
+       }
+    }
+    .tr{
+      text-align: center;
+      margin-top: .1rem;
+    }
+  }
+}
+
+
+.keyframes(fadeIn,{
+  0%{ .css3(transform, translate(-50%, -50%) scale(0));
+       opacity: 0
+  }
+  100%{ .css3(transform,translate(-50%, -50%) scale(1));
+    opacity: 1
+  }
+});
+.keyframes(fadeOut,{
+  0%{ .css3(transform, translate(-50%, -50%) scale(0));
+       opacity: 0
+  }
+  100%{ .css3(transform,translate(-50%, -50%) scale(1));
+    opacity: 1
+  }
+});
+
+@media screen and ( min-width:302px ){
+  html{
+    font-size: 40px;
+  }
+}
+//个人中心
+input , textarea{
+	-webkit-user-select:auto;
+}
+.user-box{
+  .body()
+}
+.header{
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: .2rem;
+  img{
+    margin: .2rem .2rem .1rem .5rem;
+    width: 3%;
+    .dv();
+  }
+  span{
+    .fs(0.3rem,#686868);
+    font-size: 0.3rem;
+    padding: 0 .1rem 0 .3rem;
+    border-left: 1px solid #d3d3d3;
+    .dv();
+    margin-top: .2rem;
+    font-weight: 600;
+  }
+}
+.personal{
+  .vm(95%);
+  .bg(#ffffff);
+  position: relative;
+  img{
+    .dv();
+    width: 8%;
+    margin: .2rem;
+  }
+  span{
+    .dv();
+    .fs(0.4rem,#888888);
+  }
+  button{
+    .dv();
+    width: 2.5rem;
+    font-size: .3rem;
+    .fs(0.3rem,#ffffff);
+    padding: .2rem;
+    -webkit-appearance:none;/*清除ios默认圆角*/
+    .border-radius(@radius:4px);
+    .bg(#747bf9);
+    position: absolute;
+    right: .5rem;
+    top: 0.35rem; 
+  }
+}
+.liste{
+  .vm(95%);
+  .bg(#f4f3f3);
+  ul{
+    li{
+      .flex-space-between();
+      margin-top: .1rem;
+      p{
+         width: 49.8%;
+        .lh(1rem);
+        background-size: .2rem auto;
+        .bg(#ffffff);
+        a{
+          display: block;
+          background: #fff url("../images/l-backs.png") no-repeat 90% center;
+          position: relative;    
+        }
+        img{
+          .dv();
+          margin-left: .4rem;
+          width: 8%;
+        }
+        span{
+          .dv();
+          .fs(.3rem,#888888);
+          margin-left: .4rem;
+          .pr();
+          &.active{
+            &:after{
+              content: "";
+              position: absolute;
+              top: .4rem;
+              right: -.4rem;
+              width: .2rem;
+              height: .2rem;
+              background:#f00;
+              border-radius: 100%;
+            }
+          }
+        }
+        #new-mg{
+            position: absolute;
+            right: 3rem;
+        }
+        #new-mgs{
+          position: absolute;
+          right: 3rem;
+      }
+      }
+    }
+  }
+}
+.lister{
+  .vm(95%);
+  .bg(#f4f3f3);
+  height: 6.3rem;
+  overflow: auto;
+  ul{
+    li{
+        .bg(#ffffff);
+        margin-bottom: .025rem;
+      a{
+        display: block;
+        background: url("../images/l_an.png") no-repeat .2rem center;
+        background-size: .5rem auto;
+        padding:.3rem 0 .3rem 1rem;
+        font-size: .25rem;
+        &.active{
+          background: url("../images/l_ming.png") no-repeat .2rem center;
+          background-size: .5rem auto;
+          padding-left: 1rem;
+        }
+      }
+      p{
+         width: 49.8%;
+        .lh(1rem);
+        position: relative;
+        background: #fff url("../images/l-backs.png") no-repeat 90% center;
+        background-size: .2rem auto;
+        img{
+          .dv();
+          margin-left: .4rem;
+          width: 8%;
+        }
+        span{
+          .dv();
+          .fs(.3rem,#888888);
+          margin-left: .4rem;
+          .pr();
+          &.active{
+            &:after{
+              content: "";
+              position: absolute;
+              top: .4rem;
+              right: -.4rem;
+              width: .2rem;
+              height: .2rem;
+              background:#f00;
+              border-radius: 100%;
+            }
+          }
+        }
+        #new-mg{
+            position: absolute;
+            right: 3rem;
+        }
+        #new-mgs{
+          position: absolute;
+          right: 3rem;
+      }
+      }
+    }
+  }
+}
+// 修改密码
+.main{
+  .body();
+}
+  .change_password_container{
+    .body();
+    .form-container{
+      ul{
+        li{
+          #forget-password-code{
+            border-right:1px solid #888888 ;
+            -webkit-appearance: none;
+            border-radius:0 ;
+            width:5rem;
+          }
+          #getCodes{
+            margin-left: .2rem;
+            .fs(.2rem,#7b74f9);
+            .lh(.6rem);
+            .fs(@size16,@baseBorderColor);
+             text-align: center;
+            box-sizing: border-box; 
+            vertical-align: middle;
+            background: none;
+          }
+          .l-getCode{
+            .dv();
+            .bg(#ffffff);
+          }
+        }
+      }
+    }
+    .input-m{
+      width: 50%; 
+      margin: .3rem auto;
+      text-align: center;
+      input{
+        width: 95%;
+        margin: .1rem auto;
+        font-size: .3rem;
+        padding: .1rem;
+        height: .6rem;
+        .border-radius(@radius:4px);
+      }
+    }
+    .input-ok{
+      width:46.5%;
+      margin: auto;
+      padding:.1rem;
+      .lh(.6rem);
+      .bg(#747bf9);
+      text-align: center;
+      .fs(.3rem,#ffffff);
+      .border-radius(@radius:4px);
+    }
+  }
+  //修改手机绑定
+  .binding_phone{
+    .body(); 
+    .change{
+    .fs(.3rem,#888888);
+        margin-top: 1rem;
+        text-align: center;
+      }
+    .replace-1{
+      .input-code{
+        width: 50%;
+        margin:.2rem auto;
+        .bg(#ffffff);
+        padding: .1rem;
+        .lh(.65rem);
+        #old_code{
+          width:72%;
+          font-size: .25rem;
+          border-right:1px solid #888888 ;
+          -webkit-appearance: none;
+          border-radius:0 ;
+        }
+        button{
+          margin-left: .2rem;
+          .fs(.25rem,#7b74f9);
+          .bg(#ffffff);
+        }
+      }
+      .next{
+        width:50%;
+        margin:.8rem auto;
+        padding:.1rem;
+        .lh(.6rem);
+        .bg(#747bf9);
+        text-align: center;
+        .fs(.3rem,#ffffff);
+        .border-radius(@radius:4px);
+      }
+    }
+    .replace-2{
+      display:none;
+      margin-top: .5rem;
+      .iphone-code{
+        text-align:left;
+        width: 50%;
+        margin:.2rem auto;
+        .bg(#ffffff);
+        .border-radius(@radius:4px);
+        padding: .1rem;
+        .lh(.65rem);
+        font-size: .2rem;
+       #iphone{
+        width:95%;
+        font-size: .25rem;
+        // .lh(.65rem);
+        -webkit-appearance: none;
+        border-radius:0 ;
+        } 
+      }
+      .input-codes{
+        width: 50%;
+        margin:.2rem auto;
+        text-align: center;
+        .bg(#ffffff);
+        padding: .1rem;
+        .lh(.65rem);  
+     
+        text-align: left;
+        .border-radius(@radius:4px);
+        input{
+          width:70%;
+          font-size: .25rem;
+          border-right:1px solid #888888 ;
+          -webkit-appearance: none;
+          border-radius:0 ;
+        }
+        button{
+          margin-left: .2rem;
+          .fs(.3rem,#7b74f9);
+          .bg(#ffffff);
+        }
+      }
+      .news-replace{
+        width:50%;
+        margin:.8rem auto;
+        padding:.1rem;
+        .lh(.6rem);
+        .bg(#747bf9);
+        text-align: center;
+        .fs(.3rem,#ffffff);
+        .border-radius(@radius:4px);
+      }
+    }
+  }
+  //常见问题
+  .question{
+    .body();
+    .explanation{
+      .vm(90%);
+      .bg(#ffffff);
+      padding: .2rem;
+      height: 6.3rem;
+      overflow: auto;
+      .fs(.3rem,#686868);
+      h2{
+        .fs(.5rem,#686868);
+        text-align: center;
+      }
+    }
+
+  }
+
+//支付
+.play{
+  .body();
+  .information
+    .pay_information{ 
+    .flex();
+    .vm(95%);
+    .bg(#ffffff);
+    .fs(.3rem,#888888);
+    .price{
+      padding: .3rem;
+      #symbol{
+        .fs(.5rem,#f00000);
+        .dv();
+        position: relative;
+        bottom: .35rem;
+      }
+      #produce_price{
+        .fs(.8rem,#f00000);
+      }
+    }
+      .infor{
+        margin-top: .5rem;
+        height: .7rem;
+        border-left: 1px solid #dbdbdb;
+        padding-left: .2rem;
+    }
+  }
+  .account{
+    .vm(95%);
+    .bg(#ffffff);
+    .fs(.35rem,#888888);
+    border-top:1px solid #d3d3d3;
+    .lh(.8rem);
+    span{
+      padding: .3rem;
+    }
+  }
+  .choice{
+    .vm(95%);
+    .fs(.35rem,#888888);
+    padding: .2rem .1rem .1rem .8rem;
+  }
+  .list{
+    .vm(95%);
+    .bg(#f4f3f3);
+    ul{
+      li{
+        .flex-space-between();
+        margin-top: .1rem;
+        p{
+           width: 49.8%;
+          .lh(1rem);
+          position: relative;
+          .bg(#ffffff);
+          background:#fff url('../images/l-backs.png') no-repeat 90% ;
+          img{
+            .dv();
+            margin-left: .4rem;
+            width: 8%;
+          }
+          span{
+            .dv();
+            .fs(.3rem,#888888);
+            margin-left: .4rem;
+          }
+        }
+      }
+    }
+  }
+}
+.mask{
+  position:absolute;
+  left:0px;
+  top:0px;
+  background:rgba(174,173,173,0.4);
+  width:100%;
+  height:100%;
+  display:none;
+  .prompt{
+    width:45%;
+    .bg(#ffffff);
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    .dialog-content{
+      text-align: center;
+      .fs(.3rem,#5e5e5e);
+      padding:.5rem;
+    }
+  }
+  .btn-container{
+    .flex-space-around();
+    padding:.5rem;
+    .l_backs{
+      .border-radius(4px);
+      border:1px solid #747bf9;
+      .fs(.3rem,#747bf9);
+      text-align: center;
+      width:35%;
+      padding:.1rem;
+    }
+    .l_continue{
+      .border-radius(4px);
+      .bg(#747bf9);
+      .fs(.3rem,#ffffff);
+      text-align:center;
+      width:35%;
+      padding:.1rem;
+    }
+  }
+}
+  // 消息列表
+.message-container{
+  .body();
+  .bg(#f4f3f3);
+  .center{
+    .vm(95%);
+    .bg(#ffffff);
+    height: 6.5rem;
+    overflow: auto;
+    h2{
+      .fs(.4rem,#888888);
+      text-align: center;
+      margin-top: .5rem;
+    }
+    p{
+      .fs(.3rem,#686868);
+      text-align: center;
+      margin-top: .5rem;
+      min-height: 1.2rem;
+      padding: 0 1rem;
+    }
+    a{
+      display: block;
+      width: 25%;
+      .bg(#747bf9);
+      .fs(.3rem,#ffffff);
+      text-align: center;
+      .lh(.7rem);
+      .border-radius(@radius:4px);
+      .fr();
+      margin-right:1rem;
+      margin-top: .5rem;
+    }
+  }
+}
+.lister_message{
+  .body();
+}
+.customer{
+  .body();
+  .help{
+    background:#f4f3f3 url('../images/btn-help.png') no-repeat 95% ;
+  }
+  .header{
+    #help{
+      border:none;
+      position: absolute;
+      right: 1.5rem;
+    }
+  }
+}
+.user-container{
+  .body();  
+}
+.backs{
+    cursor: pointer;
+  }

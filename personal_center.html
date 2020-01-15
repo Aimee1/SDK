@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application">
+    <meta name="Cache-Control" content="private">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="static/dist/css/wap_bundle.css">
+    <script src="static/dist/js/wap_bundle.js"></script>
+    <script src="static/dist/js/usercenter_bundle.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+</head>
+
+<body>
+    <!---个人中心-->
+    <div class="user-container user-box">
+        <div class="header cp">
+            <a href="javascript:;" class="backGame backs"><img src="static/images/l-back.png" alt=""> <span>个人中心</span></a>
+        </div>
+        <div class="l-iphonex">
+        <div class="personal">
+            <img src="static/images/l-user.png" id="user-p" alt=""> <span>17602917798</span><button id="switch" class="cp" >切换账号</button>
+        </div>
+        <div class="liste">
+            <ul>
+                <li>
+                    <p class="change_password open-page"><a href="javascript:;"><img src="static/images/l-set.png"
+                                alt=""> <span>修改密码</span></a> </p>
+                    <p class="iphone-d open-page"><a href="javascript:;"><img id="iphone-img"
+                                src="static/images/l-iphone.png" alt=""><span>更换手机绑定</span></a></p>
+                </li>
+                <li>
+                    <p><a href="javascript:;" onclick="alert('暂未开放')"><img src="static/images/l-house.png" alt="">
+                            <span>社区</span></a></p>
+                    <p class="message open-page" data-class="lister_message"><a href="javascript:;"><img
+                                src="static/images/chat.png" alt=""> <span>我的消息</span></a></p>
+                </li>
+                <li>
+                    <p class="questions open-page" data-class="question"><a href="javascript:;"><img
+                                src="static/images/l-querstion.png" alt=""> <span>常见问题</span></a></p>
+                    <p class="customer_service"><a href="javascript:;"><img src="static/images/l-earphones.png" alt="">
+                            <span>客服反馈</span></a></p>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <!---消息列表-->
+    <div class="user-container lister_message hide">
+        <div class="header iphonex_header">
+            <a href="javascript:;" class="backs"><img src="static/images/l-back.png" alt=""> <span>消息通知</span></a>
+        </div>
+        <div class="l-iphonex">
+        <div class="lister">
+            <ul>
+
+            </ul>
+        </div>
+        </div>
+    </div>
+    <!---消息详情-->
+    <div class="user-container user-message hide">
+        <div class="message-container">
+            <div class="header">
+                <a href="javascript:;" class="back_user"><img src="static/images/l-back.png"
+                        alt=""> <span>消息详情</span></a>
+            </div>
+            <div class="center">
+
+            </div>
+        </div>
+        <div class="mask">
+            <div class="prompt">
+                <div class="dialog-content">是否继续删除邮件？</div>
+                <div class="btn-container">
+                    <p src="image/img-fanhuijian.png" alt="" class="l_backs" id="l-backs">返回</p>
+                    <p src="image/img-jixujian.png" alt="" class="l_continue" id="continues">继续</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---常见问题-->
+    <div class="user-container question-continer question hide">
+        <div class="header">
+            <a href="javascript:;" class="backs"><img src="static/images/l-back.png" alt=""> <span>常见问题</span></a>
+        </div>
+        <div class="l-iphonex">
+            <div class="explanation">
+                <h2>常见问题</h2>
+                <h3>登录</h3>
+                <h4>1. 游客快速游戏</h4>
+                <p>功能介绍：<br>
+                    选择快速游戏将创建游客帐号，无需任何验证方式，可立即进入游戏。<br>
+                    注：不同54游戏将创建不同游客帐号，但是游客帐号安全性较低，请及时绑定一个帐号以免游戏记录丢失。<br>
+                    常见问题：<br>
+                    Q：我在一个设备用游客帐号玩游戏，怎么在另外一个设备登录这个游客帐号？<br>
+                    A：游客不能在多设备登录，如果需要转移设备，请先绑定一个帐号，然后用那个帐号在另外一个设备登录。<br>
+                    Q：我已经有了一个游客帐号，但想创建一个新的游客账号，怎么做？<br>
+                    A：你可以将原来的游客绑定到一个帐号，就能再次看到快速登录入口，创建新游客。<br>
+                </p><br>
+                <p>
+                    <h4>2. 手机帐号登录</h4>
+                </p>
+                <p>
+                    <h5>功能介绍：</h5>
+                    手机帐号是使用手机号进行注册/登录，可以选择使用手机验证码或密码登录该手机帐号。<br>
+                    常见问题：<br>
+                    Q：我换手机了，怎么登录原来的帐号？<br>
+                    A：可进入个人中心更换手机绑定，或联系客服提供信息更换手机绑定。<br>
+                </p><br>
+                <p>用户中心</p>
+                <p>
+                    <h5>自助服务</h5>
+                    功能介绍：<br>
+                    在54互娱用户中心有更换手机绑定，修改手机密码等功能。 <br>
+                    联系我们<br>
+                    在使用过程中遇到任何问题都可以通过游戏内的客服小助手，填写问题反馈与建议。<br>
+                </p> <br>
+                <p>自助服务</p>
+                <p>
+                    <h5>功能介绍：<br></h5>
+                    在54互娱用户中心有更换手机绑定，修改手机密码等功能。<br>
+                    联系我们<br>
+                    在使用过程中遇到任何问题都可以通过游戏内的客服小助手，填写问题反馈与建议。
+                </p><br>
+            </div>
+        </div>
+    </div>
+    <!---更换手机绑定-->
+    <div class="user-container binding_phone hide">
+        <div class="header">
+            <a href="javascript:;" class="l-bindingIphone "><img src="static/images/l-back.png" alt=""> <span>更换手机账号绑定</span></a>
+        </div>
+        <div class="change">您正在更换账号<span></span>,请输入正确的验证码</div>
+        <div class="replace-1">
+            <div class="input-code l_input">
+                <input type="text" id="old_code" placeholder="请输入验证码" value=""> <button id="oldCode" class="getCodes">获取验证码</button>
+            </div>
+            <div class="next">确认修改</div>
+        </div>
+        <div class="replace-2">
+            <div class="iphone-code l_input"><input id="iphone" type="tel" maxlength="15" placeholder="请输入手机号码"></div>
+            <div class="input-codes l_input">
+                <input type="text" id="new_code" placeholder="请输入验证码"><button id="newCode" class="getCodes">获取验证码</button>
+            </div>
+            <div class="news-replace">确认修改</div>
+        </div>
+    </div>
+
+    <!--修改密码-->
+    <div class="user-container change_password_container hide">
+        <div class="header">
+            <a href="javascript:;" class="backs"><img src="static/images/l-back.png" alt=""> <span>修改密码</span></a>
+        </div>
+        <div class="form-container">
+            <ul>
+                <li class="l_input">
+                    <input type="text" placeholder="请输入手机号" id="forget-password-number">
+                </li>
+                <li class="l_input">
+                    <input type="text" placeholder="请输入验证码" class="input-code" id="forget-password-code">
+                    <button class="getCodes" id="getCodes">获取验证码</button>
+                </li>
+                <li class="l_input">
+                    <input type="password" placeholder="请输入新密码" id="forget-password-newPsd">
+                </li>
+                <li class="l_input">
+                    <input type="password" placeholder="确认密码" id="forget-password-psdConfirm">
+
+                </li>
+            </ul>
+            <button class="btn" id="forget-password-btn"> 确认修改 </button>
+        </div>
+    </div>
+
+    <!-- 游戏登录提示绑定 -->
+    <div class="master  prompt-bind-visitor hide">
+        <div class="container">
+            <a href="javascript:;" class="close"></a>
+            <div class="form-container">
+                <p class="prompt-content">为了保障您的账户安全，请尽快绑定手机，以防游戏记录丢失。</p>
+                <div class="button-grop">
+                    <button class="right" onclick="userMethods.bind()">绑定手机</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 绑定手机号 -->
+    <div class="master phone-bind hide">
+        <div class="container">
+            <div class="header">
+                <span class="back" onclick="userMethods.phoneBindback( )">绑定手机</span>
+                <a href="javascript:;" class="close" id="phone-bind-close"></a>
+            </div>
+            <div class="form-container">
+                <ul>
+                    <li>
+                        <span>+86</span><input type="text" placeholder="请输入手机号" id="phone-bind-phoneNumber">
+                    </li>
+                </ul>
+                <button class="btn" onclick="userMethods.clickNext($('#phone-bind-phoneNumber').val())">下一步</button>
+            </div>
+        </div>
+    </div>
+
+    <!--发送验证码-->
+    <div class="master verification-code hide">
+        <div class="container pt-container ">
+            <div class="header">
+                <span class="back" id="l-back" onclick="userMethods.codeBack()">发送验证码</span>
+                <a href="javascript:;" class="close" id="verification-code-close"></a>
+            </div>
+            <div class="form-container">
+                <p class="pointsMessage">短信验证码发送至<span id="verification-code-number"></span></p>
+                <ul class="phone-code">
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                </ul>
+                <input type="tel" maxlength="4" id="authCode" class="authCode" />
+                <button class="btn" id="resend" onclick="userMethods.resend()"> 重新发送</button>
+            </div>
+        </div>
+    </div>
+    <!-- header公共头部 -->
+    <div class="user-container customer hide">
+    </div>
+    <script>
+        $(function () {
+            //初始化个人中心
+            userMethods.resizeElements();
+            if (statics.urlCode.uuid != "" && statics.urlCode.game_id != "") {
+                userMethods.deleteBugWarnRequest();
+            }
+        });
+    </script>
+</body>
+
+</html>
